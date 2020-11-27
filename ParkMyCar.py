@@ -20,6 +20,7 @@ def parkMyCar():
         filename = input("Enter the Filename\n")
         file = open(filename)
         for command in file.readlines():
+            command = command.rstrip("\n")
             parkinglot.processInput(command)  
 
 if __name__ == '__main__':
